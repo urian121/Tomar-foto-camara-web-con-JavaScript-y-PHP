@@ -67,3 +67,8 @@ body {
   border-radius: 100%;
   animation: shadow-expansion 0.9s ease-in-out infinite alternate;
 }
+
+img {
+  max-width: 150px;
+  max-height: 150px;
+}

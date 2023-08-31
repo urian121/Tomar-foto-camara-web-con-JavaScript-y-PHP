@@ -6,24 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Lista de Imágenes con Miniaturas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
-    <link rel="stylesheet" href="home.css" />
-    <style>
-        ul {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        li {
-            margin: 10px;
-            text-align: center;
-        }
-
-        img {
-            max-width: 150px;
-            max-height: 150px;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/home.css" />
 </head>
 
 <body>
