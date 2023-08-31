@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Lista de Imágenes con Miniaturas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <link rel="stylesheet" href="home.css" />
     <style>
         ul {
             list-style: none;
@@ -25,20 +27,26 @@
 </head>
 
 <body>
-    <h1>Lista de Imágenes con Miniaturas</h1>
-    <ul>
-        <?php
-        $imageDir = 'mis_fotos'; // Cambia esto al directorio de tus imágenes
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <h1 class="text-center">Lista de Imágenes con Miniaturas
+                <hr>
+            </h1>
+            <?php
+            $imageDir = 'mis_fotos'; // Cambia esto al directorio de tus imágenes
+            $files = glob("$imageDir/*.{jpg,jpeg,png,gif}", GLOB_BRACE);
+            foreach ($files as $file) {
+                $fileName = basename($file);
+                echo '<div class="col-md-3 mb-3">';
+                echo "<img src='$file' alt='$fileName'><br>$fileName";
+                echo '</div>';
+            }
 
-        // Obtener nombres de archivo en el directorio
-        $files = glob("$imageDir/*.{jpg,jpeg,png,gif}", GLOB_BRACE);
+            ?>
 
-        foreach ($files as $file) {
-            $fileName = basename($file);
-            echo "<li><img src='$file' alt='$fileName'><br>$fileName</li>";
-        }
-        ?>
-    </ul>
+        </div>
+    </div>
+
 </body>
 
 </html>
