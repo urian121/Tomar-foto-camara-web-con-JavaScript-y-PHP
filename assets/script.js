@@ -45,7 +45,9 @@ btnCapture.addEventListener("click", () => {
   btnSendImageToServer.disabled = false;
 });
 
-// Download button..
+/**
+ * Boton para forzar la descarga de la imagen
+ */
 btnDownloadImage.addEventListener("click", () => {
   const link = document.createElement("a");
   link.download = "capturedImage.png";
@@ -53,7 +55,9 @@ btnDownloadImage.addEventListener("click", () => {
   link.click();
 });
 
-// Send image to server button..
+/**
+ *Enviar imagen al serrvidor para se guardada
+ */
 btnSendImageToServer.addEventListener("click", async () => {
   const dataURL = canvasTag.toDataURL();
   const blob = await dataURLtoBlob(dataURL);
