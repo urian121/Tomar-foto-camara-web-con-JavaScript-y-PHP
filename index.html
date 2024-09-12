@@ -41,6 +41,12 @@
           <button class="btn btn-primary" id="btnStartCamera">
             Iniciar camara
           </button>
+
+            <button class="btn btn-primary" id="btnAlerta">
+            alerta
+          </button>
+
+          
         </div>
       </div>
     </div>
@@ -49,5 +55,12 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="assets/script.js"></script>
+
+      <script>
+      document.querySelector('#btnAlerta').addEventListener('click', () => {
+        alert('hola');
+      })
+    </script>
+    
   </body>
 </html>
